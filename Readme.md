@@ -1,7 +1,7 @@
 # Личный проект «Нёрдс»
 
-* Студент: [Darya Drazdouskaya](https://up.htmlacademy.ru/htmlcss/24/user/896583).
-* Наставник: [Max Maslenko](https://htmlacademy.ru/profile/biggus-dickus).
+* Студент: [Darya Drazdouskaya](https://up.htmlacademy.ru/htmlcss/24/user/896583) 🤓
+* Наставник: [Max Maslenko](https://htmlacademy.ru/profile/biggus-dickus) 🧐
 
 ---
 
