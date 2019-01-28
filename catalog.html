@@ -10,151 +10,157 @@
   <!--HEADER-->
   <header class="main-header">
       <nav class="main-navigation">
-          <a class="main-header-logo"><img src="http://placehold.it/150x100" alt="Логотип дизайн-студии «Нёрдс»"></a>
+          <a class="main-header-logo" href="index.html"><img src="http://placehold.it/150x100" alt="Логотип дизайн-студии «Нёрдс»"></a>
           <ul class="site-navigation">
-              <li><a href="studio.html">Студия</a></li>
-              <li><a href="clients.html">Клиенты</a></li>
-              <li><a href="catalog.html">Магазин</a></li>
-              <li><a href="contacts.html">Контакты</a></li>
+              <li><a href="#">Студия</a></li>
+              <li><a href="#">Клиенты</a></li>
+              <li><a href="#">Магазин</a></li>
+              <li><a href="#">Контакты</a></li>
           </ul>
-          <ul class="user-navigation">
-              <li class="logic-link">Корзина</li>
-          </ul>
+          <div class="user-navigation">
+              <a href="#">Корзина</a>
+          </div>
       </nav>
   </header>
 
   <!--MAIN-->
   <main class="container">
-    <h1 class="">Магазин готовых шаблонов</h1>
+    <h1 class="container-title">Магазин готовых шаблонов</h1>
 
-    <section class="grid">
-      <h2>СЕТКА:</h2>
-      <ul class="grid-list">
-        <li class="grid-item" class="grid-item-current"> Адаптивная</li>
-        <li class="grid-item"> Фиксированная</li>
-        <li class="grid-item"> Резиновая</li>
-      </ul>
-    </section>
+    <aside class="filters-panel">
+    <form action="" method="get" oninput="pricerange.value=priceoutput.value">
 
-    <section class="features">
-        <h2>ОСОБЕННОСТИ:</h2>
-        <ul class="features-list">
-          <li class="features-item" class="features-item-current">Слайдер</li>
-          <li class="features-item">Блок преимуществ</li>
-          <li class="features-item" class="features-item-current">Новости</li>
-          <li class="features-item">Галерея</li>
-          <li class="features-item">Корзина</li>
-        </ul>
-    </section>
+        <fieldset class="price">
+            <label for="pricerange">Стоимость:</label>
+            <input type="range" id="pricerange" name="pricerange" min="1" max="15" step="1">
+                <div class="price-range-min">
+                    <span>От</span><output name="priceoutput"> 0</output>
+                </div>
+                <div class="price-range-max">
+                    <span>До</span><output name="priceoutput"> 15 000</output>
+                </div>
+        </fieldset>
 
-    <div>
-        <a class="button" href="#">ПОКАЗАТЬ</a>
-    </div>
+        <fieldset class="grid">
+            <legend class="grid-list">Сетка:</legend>
+                <input type="radio" name="grid" id="adaptive" value="adaptive" class="grid-item" checked></input>
+                    <label for="adaptive">Адаптивная</label><br>
+                <input type="radio" name="grid" id="fixed" value="fixed" class="grid-item"></input>
+                    <label for="fixed"> Фиксированная</label><br>
+                <input type="radio" name="grid" id="responsive" value="responsive" class="grid-item"></input>
+                    <label for="responsive">Резиновая</label><br>
+        </fieldset>
+
+        <fieldset class="features">
+            <legend class="features-list">Особенности:</legend>
+                <input type="checkbox" name="slider" id="slider" class="features-item" checked></input>
+                    <label for="slider">Слайдер</label><br>
+                <input type="checkbox" name="advantages" id="advantages" class="features-item"></input>
+                    <label for="advantages"> Блок преимуществ</label><br>
+                <input type="checkbox" name="news" id="news" class="features-item" checked></input>
+                    <label for="news">Новости</label><br>
+                <input type="checkbox" name="gallery" id="gallery" class="features-item"></input>
+                    <label for="gallery">Галерея</label><br>
+                <input type="checkbox" name="basket" id="basket" class="features-item"></input>
+                    <label for="basket">Корзина</label><br>
+        </fieldset>
+        <button class="button button-show" type="submit" value="Показать">
+    </form>
+    </aside>
+
 
     <section class="catalog">
-        <h2 class="visually-hidden">СПИСОК ШАБЛОНОВ САЙТОВ</h2>
+        <h2 class="visually-hidden">Каталог шаблонов сайтов</h2>
         <ul class="catalog-list">
 
           <!--SEDONA-->
           <li class="catalog-item">
               <a href="catalog-item.html">
-                  <span class="catalog-item-title">SEDONA</span>
-                  <span class="catalog-category">Информационный сайт для туристов</span>
+                  <h3 class="catalog-item-title">SEDONA</h3>
+                  <p class="catalog-category">Информационный сайт для туристов</p>
               </a>
-                <p class="catalog-item-image">
-                <a href="catalog-item.html">
+              <a class="catalog-item-image" href="catalog-item.html">
                   <img src="http://placehold.it/150x100" alt="SEDONA">
-                </a>
-              </p>
+              </a>
               <p class="catalog-item-price">
-                <a class="button" href="#">9 900 РУБ.</a>
+                <a class="button" href="#"> 9&thinsp;900 РУБ.</a>
               </p>
             </li>
 
             <!--PINK APP-->
             <li class="catalog-item">
                 <a href="catalog-item.html">
-                    <span class="catalog-item-title">PINK APP</span>
-                    <span class="catalog-category"> Информационный сайт о приложении PINK APP</span>
+                    <h3 class="catalog-item-title">PINK APP</h3>
+                    <p class="catalog-category"> Информационный сайт о приложении PINK APP</p>
                 </a>
-                  <p class="catalog-item-image">
-                  <a href="catalog-item.html">
+                <a class="catalog-item-image" href="catalog-item.html">
                     <img src="http://placehold.it/150x100" alt="PINK APP">
-                  </a>
-                </p>
+                </a>
                 <p class="catalog-item-price">
-                  <a class="button" href="#"> 9 900 РУБ.</a>
+                  <a class="button" href="#"> 9&thinsp;900 РУБ.</a>
                 </p>
               </li>
 
               <!--BORODINSKI-->
               <li class="catalog-item">
                   <a href="catalog-item.html">
-                      <span class="catalog-item-title">Barbershop Borodinski</span>
-                      <span class="catalog-category"> Информационный сайт Барбершопа "Бородинский"></span>
+                      <h3 class="catalog-item-title">Barbershop Borodinski</h3>
+                      <p class="catalog-category"> Информационный сайт Барбершопа "Бородинский"></p>
                   </a>
-                    <p class="catalog-item-image">
-                    <a href="catalog-item.html">
+                  <a class="catalog-item-image" href="catalog-item.html">
                       <img src="http://placehold.it/150x100" alt="Barbershop Borodinski">
-                    </a>
-                  </p>
+                  </a>
                   <p class="catalog-item-price">
-                    <a class="button" href="#"> 9 900 РУБ.</a>
+                    <a class="button" href="#"> 9&thinsp;900 РУБ.</a>
                   </p>
                 </li>
 
                 <!--MISHKA-->
                 <li class="catalog-item">
                     <a href="catalog-item.html">
-                        <span class="catalog-item-title"> MISHKA</span>
-                        <span class="catalog-category"> Информационный сайт hand-made магазина MISHKA</span>
+                        <h3 class="catalog-item-title"> MISHKA</h3>
+                        <p class="catalog-category"> Информационный сайт hand-made магазина MISHKA</p>
                     </a>
-                      <p class="catalog-item-image">
-                      <a href="catalog-item.html">
+                    <a class="catalog-item-image" href="catalog-item.html">
                         <img src="http://placehold.it/150x100" alt="MISHKA">
-                      </a>
-                    </p>
+                    </a>
                     <p class="catalog-item-price">
-                      <a class="button" href="#"> 9 900 РУБ.</a>
+                      <a class="button" href="#"> 9&thinsp;900 РУБ.</a>
                     </p>
                  </li>
 
                   <!--A+-->
                   <li class="catalog-item">
                       <a href="catalog-item.html">
-                          <span class="catalog-item-title"> A+</span>
-                          <span class="catalog-category"> Информационный сайт образовательного портала А+<span>
+                          <h3 class="catalog-item-title"> A+</h3>
+                          <p class="catalog-category"> Информационный сайт образовательного портала А+<span>
                       </a>
-                        <p class="catalog-item-image">
-                        <a href="catalog-item.html">
+                        <a class="catalog-item-image" href="catalog-item.html">
                           <img src="http://placehold.it/150x100" alt="A+">
                         </a>
-                      </p>
                       <p class="catalog-item-price">
-                        <a class="button" href="#"> 9 900 РУБ.</a>
+                        <a class="button" href="#"> 9&thinsp;900 РУБ.</a>
                       </p>
                     </li>
 
                     <!--КВАСТ-->
                     <li class="catalog-item">
                         <a href="catalog-item.html">
-                            <span class="catalog-item-title">КВАСТ</span>
-                            <span class="catalog-category"> Информационный сайт пивоварни "КВАСТ"</span>
+                            <h3 class="catalog-item-title">КВАСТ</h3>
+                            <p class="catalog-category"> Информационный сайт пивоварни "КВАСТ"</p>
                         </a>
-                          <p class="catalog-item-image">
-                          <a href="catalog-item.html">
+                        <a class="catalog-item-image" href="catalog-item.html">
                             <img src="http://placehold.it/150x100" alt="КВАСТ">
                           </a>
-                        </p>
                         <p class="catalog-item-price">
-                          <a class="button" href="#"> 9 900 РУБ.</a>
+                          <a class="button" href="#"> 9&thinsp;900 РУБ.</a>
                         </p>
                     </li>
               </ul>
               <ul class="pagination-list">
-                  <li class="pagination-item pagination-item-current"><a href="#">1</a></li>
-                  <li class="pagination-item "><a a href="#">2</a></li>
-                  <li class="pagination-item"><a href="#">3</a></li>
+                  <li class="pagination-item pagination-item-current"><a>1</a></li>
+                  <li class="pagination-item "><a>2</a></li>
+                  <li class="pagination-item"><a>3</a></li>
                   <a class="button" href="#">СЛЕДУЮЩАЯ</a>
               </ul>
       </section>
@@ -162,13 +168,11 @@
 
   <!--FOOTER-->
   <footer class="main-footer">
-      <div class="footer-social">
-          <ul>
+      <ul class="footer-social">
               <li><a class="social-button" href="#">Вконтакте</a></li>
               <li><a class="social-button" href="#">Фейсбук</a></li>
               <li><a class="social-button" href="#">Инстаграм</a></li>
-          </ul>
-      </div>
+      </ul>
       <b class="footer-text"> Давайте дружить, это выгодно!</b>
       <p class="footer-sale">Скидка 10% для друзей из социальных сетей.</p>
   </footer>
