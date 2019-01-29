@@ -28,49 +28,70 @@
     <h1 class="container-title">Магазин готовых шаблонов</h1>
 
     <aside class="filters-panel">
-    <form action="" method="get" oninput="pricerange.value=priceoutput.value">
+    <form action="https://echo.htmlacademy.ru" method="get">
 
         <fieldset class="price">
             <label for="pricerange">Стоимость:</label>
             <input type="range" id="pricerange" name="pricerange" min="1" max="15" step="1">
                 <div class="price-range-min">
-                    <span>От</span><output name="priceoutput"> 0</output>
+                    <span>От</span><output name="priceoutputmin"> 0</output>
                 </div>
                 <div class="price-range-max">
-                    <span>До</span><output name="priceoutput"> 15 000</output>
+                    <span>До</span><output name="priceoutputmax"> 15 000</output>
                 </div>
         </fieldset>
 
         <fieldset class="grid">
-            <legend class="grid-list">Сетка:</legend>
-                <input type="radio" name="grid" id="adaptive" value="adaptive" class="grid-item" checked></input>
-                    <label for="adaptive">Адаптивная</label><br>
-                <input type="radio" name="grid" id="fixed" value="fixed" class="grid-item"></input>
-                    <label for="fixed"> Фиксированная</label><br>
-                <input type="radio" name="grid" id="responsive" value="responsive" class="grid-item"></input>
-                    <label for="responsive">Резиновая</label><br>
+            <legend>Сетка:</legend>
+
+            <ul class="grid-list">
+                <li class="grid-item">
+                    <input type="radio" name="grid" id="adaptive" value="adaptive" checked>
+                    <label for="adaptive">Адаптивная</label>
+                </li>
+                <li class="grid-item">
+                    <input type="radio" name="grid" id="fixed" value="fixed">
+                    <label for="fixed">Фиксированная</label>
+                </li>
+                <li class="grid-item">
+                    <input type="radio" name="grid" id="responsive" value="responsive">
+                    <label for="responsive">Резиновая</label>
+                </li>
+            </ul>
         </fieldset>
 
         <fieldset class="features">
             <legend class="features-list">Особенности:</legend>
-                <input type="checkbox" name="slider" id="slider" class="features-item" checked></input>
-                    <label for="slider">Слайдер</label><br>
-                <input type="checkbox" name="advantages" id="advantages" class="features-item"></input>
-                    <label for="advantages"> Блок преимуществ</label><br>
-                <input type="checkbox" name="news" id="news" class="features-item" checked></input>
-                    <label for="news">Новости</label><br>
-                <input type="checkbox" name="gallery" id="gallery" class="features-item"></input>
-                    <label for="gallery">Галерея</label><br>
-                <input type="checkbox" name="basket" id="basket" class="features-item"></input>
-                    <label for="basket">Корзина</label><br>
+
+            <ul>
+                <li class="features-item">
+                    <input type="checkbox" name="slider" id="slider" checked>
+                    <label for="slider">Слайдер</label>
+                </li>
+                <li class="features-item">
+                    <input type="checkbox" name="advantages" id="advantages">
+                    <label for="advantages"> Блок преимуществ</label>
+                </li>
+                <li class="features-item">
+                    <input type="checkbox" name="news" id="news" checked>
+                    <label for="news">Новости</label>
+                </li>
+                <li class="features-item">
+                    <input type="checkbox" name="gallery" id="gallery">
+                    <label for="gallery">Галерея</label>
+                </li>
+                <li class="features-item">
+                    <input type="checkbox" name="basket" id="basket" class="features-item">
+                    <label for="basket">Корзина</label>
+                </li>
+            </ul>
         </fieldset>
-        <button class="button button-show" type="submit" value="Показать">
+        <button class="button button-show" type="submit">Показать</button>
     </form>
     </aside>
 
 
     <section class="catalog">
-        <h2 class="visually-hidden">Каталог шаблонов сайтов</h2>
         <ul class="catalog-list">
 
           <!--SEDONA-->
@@ -91,7 +112,7 @@
             <li class="catalog-item">
                 <a href="catalog-item.html">
                     <h3 class="catalog-item-title">PINK APP</h3>
-                    <p class="catalog-category"> Информационный сайт о приложении PINK APP</p>
+                    <p class="catalog-category"> Продуктовый лендинг приложения для iOS и Android</p>
                 </a>
                 <a class="catalog-item-image" href="catalog-item.html">
                     <img src="http://placehold.it/150x100" alt="PINK APP">
@@ -105,7 +126,7 @@
               <li class="catalog-item">
                   <a href="catalog-item.html">
                       <h3 class="catalog-item-title">Barbershop Borodinski</h3>
-                      <p class="catalog-category"> Информационный сайт Барбершопа "Бородинский"></p>
+                      <p class="catalog-category"> Сайт салона красоты. Для мужчин, да.></p>
                   </a>
                   <a class="catalog-item-image" href="catalog-item.html">
                       <img src="http://placehold.it/150x100" alt="Barbershop Borodinski">
@@ -119,7 +140,7 @@
                 <li class="catalog-item">
                     <a href="catalog-item.html">
                         <h3 class="catalog-item-title"> MISHKA</h3>
-                        <p class="catalog-category"> Информационный сайт hand-made магазина MISHKA</p>
+                        <p class="catalog-category"> Интернет-магазин вязаных игрушек</p>
                     </a>
                     <a class="catalog-item-image" href="catalog-item.html">
                         <img src="http://placehold.it/150x100" alt="MISHKA">
@@ -133,7 +154,7 @@
                   <li class="catalog-item">
                       <a href="catalog-item.html">
                           <h3 class="catalog-item-title"> A+</h3>
-                          <p class="catalog-category"> Информационный сайт образовательного портала А+<span>
+                          <p class="catalog-category"> Лендинг курсов повышения квалификации<span>
                       </a>
                         <a class="catalog-item-image" href="catalog-item.html">
                           <img src="http://placehold.it/150x100" alt="A+">
@@ -147,7 +168,7 @@
                     <li class="catalog-item">
                         <a href="catalog-item.html">
                             <h3 class="catalog-item-title">КВАСТ</h3>
-                            <p class="catalog-category"> Информационный сайт пивоварни "КВАСТ"</p>
+                            <p class="catalog-category"> Промо-сайт производителя крафтового кваса</p>
                         </a>
                         <a class="catalog-item-image" href="catalog-item.html">
                             <img src="http://placehold.it/150x100" alt="КВАСТ">
