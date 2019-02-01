@@ -30,6 +30,7 @@
     <h1 class="container-title">Магазин готовых шаблонов</h1>
 
     <aside class="filters-panel">
+    <h2 class="visually-hidden">Фильтр товаров</h2>
     <form action="https://echo.htmlacademy.ru" method="get">
 
         <fieldset class="price">
@@ -186,6 +187,40 @@
                   <li class="pagination-item"><a>3</a></li>
                   <a class="button" href="#">СЛЕДУЮЩАЯ</a>
               </ul>
+      </section>
+
+      <section class="contacts">
+          <h2 class="visually-hidden"> Как до нас добраться</h2>
+          <div class="contacts-map">
+              <img class="" src="img/map-google.jpg" width="1440" height="416" alt="Офис компании по адресу
+                  ул. Б. Конюшенная 19/8, Санкт-Петербург">
+          </div>
+          <div class="contacts-info">
+              <b> NЁRDS DESIGN STUDIO</b>
+              <p> 191186, Санкт-Петербург,
+                  ул. Б. Конюшенная, д. 19/8</p>
+              <p> тел. +7 (812) 275-75-75</p>
+              <a class="button" href="#"> Напишите нам</a>
+          </div>
+      </section>
+
+      <section class="connection">
+          <h2>Напишите нам</h2>
+          <form action="https://echo.htmlacademy.ru" method="post" class="connection-form">
+              <p class="connection-item">
+                  <label for="connection-name">Ваше имя:</label>
+                  <input type="text" id="connection-name" name="name" placeholder="Имя Фамилия" size="20" required>
+              </p>
+              <p class="connection-item">
+                  <label for="connection-email">Ваш e-mail:</label>
+                  <input type="text" id="connection-email" name="email" placeholder="email@example.com" size="20" required>
+              </p>
+              <p class="connection-item">
+                  <label for="connection-text">Текст письма:</label>
+                  <input type="text" id="connection-text" name="text" placeholder="В свободной форме" size="40" required>
+              </p>
+              <button class="button" type="submit">Отправить</button>
+          </form>
       </section>
   </main>
 
