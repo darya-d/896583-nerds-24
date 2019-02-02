@@ -7,7 +7,7 @@
   </head>
   <body>
 
-<!--HEADER-->
+    <!--HEADER-->
     <header class="main-header">
         <nav class="main-navigation">
             <a class="main-header-logo">
@@ -25,10 +25,13 @@
         </nav>
     </header>
 
-<!--MAIN-->
+    <!--MAIN-->
     <main class="container">
         <h1 class="visually-hidden">Дизайн-студия "Нёрдс"</h1>
 
+        <!--Slider-->
+
+        <!--Our services-->
         <section class="services">
             <h2 class="visually-hidden">Услуги</h2>
             <ul class="services-list">
@@ -70,6 +73,7 @@
             </ul>
         </section>
 
+        <!--Our partners-->
         <section class="partners">
             <h2 class="visually-hidden"> Наши партнеры</h2>
             <ul class="partners-logo">
@@ -80,6 +84,7 @@
             </ul>
         </section>
 
+        <!--Google map + address-->
         <section class="contacts">
             <h2 class="visually-hidden"> Как до нас добраться</h2>
             <div class="contacts-map">
@@ -90,32 +95,33 @@
                 <b> NЁRDS DESIGN STUDIO</b>
                 <p> 191186, Санкт-Петербург,
                     ул. Б. Конюшенная, д. 19/8</p>
-                <p> тел. +7 (812) 275-75-75</p>
-                <a class="button" href="#"> Напишите нам</a>
+                <p><a href="tel:+78122757575"> тел. +7 (812) 275-75-75</a></p>
+                <a class="button" href="#feedback"> Напишите нам</a>
             </div>
         </section>
 
+        <!--Feedback form-->
         <section class="connection">
             <h2>Напишите нам</h2>
-            <form action="https://echo.htmlacademy.ru" method="post" class="connection-form">
+            <form action="https://echo.htmlacademy.ru" method="post" class="connection-form" id="feedback">
                 <p class="connection-item">
                     <label for="connection-name">Ваше имя:</label>
-                    <input type="text" id="connection-name" name="name" placeholder="Имя Фамилия" size="20" required>
+                    <input type="text" id="connection-name" name="name" placeholder="Имя Фамилия" size="" required>
                 </p>
                 <p class="connection-item">
                     <label for="connection-email">Ваш e-mail:</label>
-                    <input type="text" id="connection-email" name="email" placeholder="email@example.com" size="20" required>
+                    <input type="email" id="connection-email" name="email" placeholder="email@example.com" size="" required>
                 </p>
                 <p class="connection-item">
                     <label for="connection-text">Текст письма:</label>
-                    <input type="text" id="connection-text" name="text" placeholder="В свободной форме" size="40" required>
+                    <textarea id="connection-text" name="text" placeholder="В свободной форме" rows="" cols="" required></textarea>
                 </p>
                 <button class="button" type="submit">Отправить</button>
             </form>
         </section>
     </main>
 
-  <!--FOOTER-->
+    <!--FOOTER-->
     <footer class="main-footer">
         <div class="footer-social">
             <ul>
