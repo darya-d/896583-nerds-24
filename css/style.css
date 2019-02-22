@@ -27,15 +27,30 @@
 }
 
 /* General styles */
+html {
+  box-sizing: border-box;
+}
+
+*, *::before, *::after {
+  box-sizing: inherit;
+}
+
 body {
   margin: 0;
   padding: 0;
-
   font-family: "Roboto", Arial, sans-serif;
   font-size: 16px;
   line-height: 1.5;
   font-weight: 400;
   color: #283136;
+}
+
+.container-center {
+  width: 100%;
+  max-width: 1200px;
+  padding-right: 20px;
+  padding-left: 20px;
+  margin: 0 auto;
 }
 
 a {
@@ -84,22 +99,27 @@ a {
 
                     /* HEADER */
 
- /* Navigation */
-.main-navigation {
+.main-header {
   background-color: #e1e1e1;
-  font-weight: 500;
-  width: 100%;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  margin-bottom: 40px;
 }
 
 .main-header-logo img{
+  display: inline-block;
   width: 160px;
   height: 65px;
-  padding-top: 50px;
-  padding-left: 140px;
+  margin-top: 45px;
+}
+
+.main-header-background {
+  background-color: #e1e1e1;
+}
+
+ /* Navigation */
+.main-navigation {
+  font-weight: 500;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
 .site-navigation,
@@ -111,6 +131,7 @@ a {
 
 .site-navigation {
   width: 500px;
+  flex-wrap: wrap;
 }
 
 .site-navigation li {
@@ -119,7 +140,6 @@ a {
 
 .user-navigation {
   width: 130px;
-  padding-right: 140px;
 }
 
 .site-navigation a,
@@ -142,6 +162,12 @@ a {
 
                   /* MAIN *
 /* Slider*/
+.slider {
+  margin-top: 35px;
+  margin-bottom: 80px;
+}
+
+
 .slider-list {
   display: none;
   list-style: none;
@@ -157,8 +183,6 @@ a {
  /* Services */
 .services {
   min-height: 360px;
-  padding-right: 200px;
-  padding-left: 140px;
   margin-bottom: 160px;
 }
 
@@ -171,25 +195,22 @@ a {
 
 .services-list li {
   width: 300px;
+  padding-top: 150px;
+  background-repeat: no-repeat;
 }
 
 .services-list li:nth-child(1){
-  padding-top: 150px;
-  background-image: url(../img/illustration-1.jpg);
-  background-repeat: no-repeat;
+  background-image: url("../img/illustration-1.jpg");
 }
 
 .services-list li:nth-child(2){
-  padding-top: 150px;
-  background-image: url(../img/illustration-2.jpg);
-  background-repeat: no-repeat;
+  background-image: url("../img/illustration-2.jpg");
 }
 
 .services-list li:nth-child(3){
-  padding-top: 150px;
-  background-image: url(../img/illustration-3.jpg);
-  background-repeat: no-repeat;
+  background-image: url("../img/illustration-3.jpg");
 }
+
 .services-item h3 {
   font-size: 24px;
   line-height: 1.25;
@@ -236,43 +257,62 @@ a {
         /*ABOUT US*/
 
 .info {
-  padding-right: 180px;
-  padding-left: 140px;
   margin-bottom: 140px;
-  display:flex;
+  display: flex;
   justify-content: space-between;
   align-items: center;
 }
 
-div.info-column-right {
-  width: 360px;
-  display: flex;
-  flex-direction: column;
+.info-column-right {
+  width: 390px;
 }
 
-div.info-column-left {
+.info-column-left {
   width: 650px;
-  display: flex;
-  flex-direction: column;
-
-}
-
-span.work-percent {
-  display: flex;
-  flex-direction: row;
-  margin-top: 40px;
-  margin-bottom: 25px;
 }
 
 .info-title {
+  display: inline-block;
   font-size: 45px;
   line-height: 1;
   font-weight: 500;
   width: 650px;
+  margin-bottom: 35px;
+}
+
+.info-text {
+  margin-bottom: 45px;
 }
 
 .info h3 {
   text-transform: uppercase;
+}
+
+.work {
+  margin-bottom: 45px;
+}
+
+.work-item {
+  display: inline-block;
+  margin-right: 25px;
+}
+
+.work-percent {
+  font-size: 45px;
+  line-height: 0.22;
+}
+
+.work-percent sup {
+  font-size: 28px;
+  line-height: 0;
+  vertical-align: top;
+  margin-left: -.30em;
+  position: relative;
+}
+
+.work-description {
+  line-height: 1.13;
+  color: #283136;
 }
 
 .orders-list {
@@ -300,11 +340,13 @@ span.work-percent {
   line-height: 0.22;
 }
 
+.work-description {
+  display: inline-block;
+  margin-top: 20px;
+}
       /*PARTNERS*/
 
 .partners {
-  padding-right: 180px;
-  padding-left: 170px;
   margin-bottom: 130px;
   opacity: 0.3;
 }
@@ -315,6 +357,34 @@ span.work-percent {
   justify-content: space-between;
 }
 
+.contacts {
+  position: relative;
+  min-height: 416px;
+  background-color: #e9e5dc;
+  overflow: hidden;
+}
+
+.contacts-map {
+  position: absolute;
+  left: 0;
+  right: 0;
+  width: 1440px;
+  height: 416px;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+.contacts-info {
+  width: 319px;
+  height: 308px;
+  position: absolute;
+  left: calc(50% - 580px);
+  padding: 10px;
+  min-height: 200px;
+  margin-top: 50px;
+  background-color: #fff;
+}
+
 .contacts-info,
 .contacts-tel a {
   color: #666;
@@ -323,6 +393,7 @@ span.work-percent {
 .contacts-info b {
   font-size: 18px;
   color: #000;
+  vertical-align: middle;
 }
 
 .contacts-info p {
@@ -330,14 +401,13 @@ span.work-percent {
 }
 
 .button-contact {
+  display: inline-block;
   color: #fff;
   background-color: #fb565a;
 }
 
-
 /* FOOTER */
 .main-footer {
-  padding-left: 140px;
   display: flex;
   flex-direction: row;
 }
@@ -373,65 +443,44 @@ span.work-percent {
 
 
                        /* CATALOG.HTML*/
-.container-catalog h1 {
+.page-title {
+  height: 200px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.container-background {
+  background-color: #e1e1e1;
+}
+
+.container-title {
+  width: 100%;
+  display: inline-block;
   font-size: 55px;
   line-height: 1;
   background-color: #e1e1e1;
+  color: #000;
+  font-weight: 500;
   text-align: center;
 }
 
-/* Sorting*/
-.sorting {
-  width: 850px;
+.wrapper-column {
   display: flex;
-  justify-content: flex-end;
-  margin-left: 400px;
-  margin-right: 140px;
+  justify-content: space-between;
 }
 
-.sorting p {
-  font-size: 18px;
-  line-height: 1;
-  font-weight: 700;
-  text-transform: uppercase;
-  margin-right: 260px;
-  align-items: center;
-}
-
-.sorting-list-value {
-  list-style: none;
-  font-size: 14px;
-  line-height: 1.29;
-  text-transform: uppercase;
-  display: flex;
-  align-items: center;
-  margin-left: 140px;
-}
-
-.sorting-list-value li {
-  margin-left: 27px;
-  align-items: center;
-}
-
-.sorting-item-value a {
-  color:rgba(0, 0, 0, 0.3);
-}
-
-.sorting-item-value a.by-price-current {
-  color: #000;
-}
-
-.sorting-list-turn {
-  list-style: none;
-}
-
-.filter-form {
+.wrapper-column-left {
+  padding-top: 20px;
   width: 260px;
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-start;
-  margin-left: 140px;
 }
+
+.wrapper-column-right {
+  padding-top: 20px;
+  width: 760px;
+}
+
+/* Фильтры */
 
 .price,
 .grid,
@@ -449,6 +498,7 @@ span.work-percent {
 .grid-item {
   list-style: none;
   line-height: 1.25;
+  margin-bottom: 20px;
 }
 
 .price label,
@@ -463,6 +513,7 @@ span.work-percent {
 .features-item {
   list-style: none;
   line-height: 1.25;
+  margin-bottom: 20px;
 }
 
 .button-filter {
@@ -486,18 +537,69 @@ span.work-percent {
   color: rgba(0, 0, 0, 0.3);
 }
 
+/* Сортировка */
+
+.sorting {
+  display: flex;
+}
+
+.sorting p {
+  font-size: 18px;
+  line-height: 1;
+  font-weight: 700;
+  text-transform: uppercase;
+  margin-right: 260px;
+  align-items: center;
+}
+
+.sorting-list-value {
+  list-style: none;
+  font-size: 14px;
+  line-height: 1.29;
+  text-transform: uppercase;
+  display: flex;
+  align-items: center;
+}
+
+.sorting-list-value li {
+  margin-left: 27px;
+  align-items: center;
+}
+
+.sorting-item-value a {
+  color:rgba(0, 0, 0, 0.3);
+}
+
+.sorting-item-value a.by-price-current {
+  color: #000;
+}
+
+.sorting-list-turn {
+  list-style: none;
+}
+
+/* Каталог сайтов */
+
 .catalog-list {
   list-style: none;
   line-height: 1.13;
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-between;
 }
 
 .catalog-item {
-  text-align: center;
+  width: 360px;
   background-color: #e1e1e1;
-  margin-bottom: 10px;
+  position: relative;
+  margin-bottom: 40px;
+}
+
+.catalog-item:nth-child(odd):not(:last-child) {
+  margin-right: 40px;
+}
+
+.catalog-item-image {
+  display: block;
 }
 
 .catalog-item a {
@@ -506,6 +608,19 @@ span.work-percent {
 
 .catalog-item p {
   color: #666;
+}
+
+.catalog-description {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  text-align: center;
+  background-color: #eee;
+}
+
+.catalog-item-title {
+  margin: 0;
 }
 
 .catalog-item-price a {
@@ -518,10 +633,6 @@ span.work-percent {
   list-style: none;
   display: flex;
   margin-bottom: 70px;
-}
-
-.pagination-list li {
-  align-items: ;
 }
 
 .pagination-item a {
@@ -552,6 +663,6 @@ span.work-percent {
 }
 
 .pagination-list a.button {
-  background-color: #eeeeee;
+  background-color: #eee;
   color: #000;
 }
