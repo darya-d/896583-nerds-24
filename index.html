@@ -11,74 +11,69 @@
 
     <!--HEADER-->
 
-    <div class="main-header-background">
-    <div class="container-center">
-    <header class="main-header">
-      <nav class="main-navigation">
-        <a class="main-header-logo">
-          <img src="img/nerds-logo.svg" width="160" height="65" alt="Логотип дизайн-студии «Нёрдс»">
-        </a>
-        <ul class="site-navigation reset-list">
-          <li><a href="studio.html"> Студия</a></li>
-          <li><a href="clients.html"> Клиенты</a></li>
-          <li><a href="catalog.html"> Магазин</a></li>
-          <li><a href="contacts.html"> Контакты</a></li>
-        </ul>
-        <div class="user-navigation">
-          <a href="#">Корзина</a>
-        </div>
-      </nav>
-    </header>
-    </div>
+    <div class="background">
+      <header class="main-header container-center">
+        <nav class="main-navigation">
+          <a class="main-header-logo">
+            <img src="img/nerds-logo.svg" width="160" height="65" alt="Логотип дизайн-студии «Нёрдс»">
+          </a>
+          <ul class="site-navigation reset-list">
+            <li><a class="current-page" href="studio.html"> Студия</a></li>
+            <li><a href="clients.html"> Клиенты</a></li>
+            <li><a href="catalog.html"> Магазин</a></li>
+            <li><a href="contacts.html"> Контакты</a></li>
+          </ul>
+          <div class="user-navigation">
+            <a class="login-link" href="#">Корзина</a>
+          </div>
+        </nav>
+      </header>
 
-
-    <div class="container-center">
 
     <!--MAIN-->
 
-    <main class="container">
-      <h1 class="visually-hidden">Дизайн-студия "Нёрдс"</h1>
+      <main class="container">
+        <h1 class="visually-hidden">Дизайн-студия "Нёрдс"</h1>
 
-    <!--Slider-->
+    <!-- Слайдер-->
+        <section class="slider container-center">
 
-    <section class="slider">
-      <h2 class="visually-hidden"> Слоганы</h2>
-      <input type="radio" name="nav" id="slide-1" value="slide-1" checked>
-      <input type="radio" name="nav" id="slide-2" value="slide-2">
-      <input type="radio" name="nav" id="slide-3" value="slide-3">
-      <ul class="slider-list">
+            <h2 class="visually-hidden">Преимущества</h2>
+            <input class="visually-hidden" type="radio" id="product-1" name="toggle" checked>
+            <input class="visually-hidden" type="radio" id="product-2" name="toggle">
+            <input class="visually-hidden" type="radio" id="product-3" name="toggle">
 
-        <li class="slider-item">
-          <b class="slider-tagline" id="slide-1">Долго, дорого, скурпулезно.</b>
-        	<p id="slide-1">Математически выверенный дизайн для вашего сайта или мобильного приложения.</p>
-          <a class="button button-slider" href="#" id="slide-1">Узнать больше</a>
-        </li>
+            <div class="slider-controls">
+              <label class="slider-controls-item slider-controls-item-1" for="product-1">Слайд 1</label>
+              <label class="slider-controls-item slider-controls-item-2" for="product-2">Слайд 2</label>
+              <label class="slider-controls-item slider-controls-item-3" for="product-3">Слайд 3</label>
+            </div>
 
-        <li class="slider-item">
-          <b class="slider-tagline" id="slide-2">Любим математику как никто другой</b>
-          <p id="slide-2">Никакого креатива, только математические формулы для расчета идеальных пропорций.</p>
-          <a class="button button-slider" href="#" id="slide-2">Узнать больше</a>
-        </li>
+            <ul class="slider-list reset-list ">
+              <li class="slider-item">
+                <h3>Долго, дорого, скрупулезно.</h3>
+                <p>Математически выверенный дизайн для вашего сайта или мобильного приложения.</p>
+                <a class="button button-slider" href="#">Узнать больше</a>
+              </li>
+              <li class="slider-item">
+                <h3>Любим математику как никто другой</h3>
+                <p>Никакого креатива, только математические формулы для расчета идеальных пропорций.</p>
+                <a class="button button-slider" href="#">Узнать больше</a>
+              </li>
+              <li class="slider-item">
+                <h3>Только ночь, только хардкор</h3>
+                <p>Работать днем, как все? Мы против этого. Ближе к полуночи работа только начинается.</p>
+                <a class="button button-slider" href="#">Узнать больше</a>
+              </li>
+            </ul>
 
-        <li class="slider-item">
-          <b class="slider-tagline" id="slide-3">Только ночь,только хардкор</b>
-          <p id="slide-3">Работать днем, как все? Мы против этого. Ближе к полуночи работа только начинается.</p>
-          <a class="button button-slider" href="#" id="slide-3">Узнать больше</a>
-        </li>
-      </ul>
-      <div class="slider-control">
-        <label for="slide-1"></label>
-        <label for="slide-2"></label>
-        <label for="slide-3"></label>
-      </div>
-      </div>
-      </div>
+        </section>
 
-    </section>
+    </div>
 
     <div class="container-center">
 
-    <!--Our services-->
+    <!-- Услуги -->
 
     <section class="services">
       <h2 class="visually-hidden">Услуги</h2>
@@ -114,7 +109,7 @@
             <li class="orders-item"> Мобильных приложений для iOS и Android</li>
             <li class="orders-item"> Слайдшоу и видео для корпоративных презентаций</li>
           </ul>
-        </div>
+      </div>
 
         <div class="info-column-right">
           <img class="main-logo" src="img/illustration-nerds.jpg" width="360" height="208" alt="Логотип дизайн-студии «Нёрдс»">
@@ -133,11 +128,10 @@
                 <span class="work-description">Минимальная предоплата</span>
               </li>
             </ul>
-      <div>
+        </div>
     </section>
 
     <!--Our partners-->
-
     <section class="partners">
       <h2 class="visually-hidden"> Наши партнеры</h2>
         <ul class="partners-logo reset-list">
@@ -150,7 +144,6 @@
     </div>
 
     <!--Google map-->
-
     <section class="contacts">
       <h2 class="visually-hidden"> Как до нас добраться</h2>
       <div class="contacts-map">
@@ -159,7 +152,6 @@
       </div>
 
     <!--Address-->
-      <div class="contacts-container">
       <div class="contacts-info">
         <b> NЁRDS DESIGN STUDIO</b>
         <p> 191186, Санкт-Петербург,
@@ -167,40 +159,17 @@
         <p class="contacts-tel">тел. <a href="tel:+78122757575"> +7 (812) 275-75-75</a></p>
         <a class="button button-contact" href="#feedback"> Напишите нам</a>
       </div>
-      </div>
     </section>
+  </main>
 
-    <!--Feedback form-->
-
-    <section class="connection">
-      <h2>Напишите нам</h2>
-        <form action="https://echo.htmlacademy.ru" method="post" class="connection-form" id="feedback">
-          <p class="connection-item">
-            <label for="connection-name">Ваше имя:</label>
-            <input type="text" id="connection-name" name="name" placeholder="Имя Фамилия" required>
-          </p>
-          <p class="connection-item">
-            <label for="connection-email">Ваш e-mail:</label>
-            <input type="email" id="connection-email" name="email" placeholder="email@example.com" required>
-          </p>
-          <p class="connection-item">
-            <label for="connection-text">Текст письма:</label>
-            <textarea id="connection-text" name="text" placeholder="В свободной форме" required></textarea>
-          </p>
-          <button class="button" type="submit">Отправить</button>
-        </form>
-    </section>
-    </main>
-
-    <div class="container-center">
-
-    <!--FOOTER-->
-
+  <!--FOOTER-->
+  <div class="container-center">
     <footer class="main-footer">
+      <h2 class="visually-hidden"> Мы в социальных сетях</h2>
       <ul class="social-list reset-list">
-        <li class="social-item"><a class="social-icon" href="#">Вконтакте</a></li>
-        <li class="social-item"><a class="social-icon" href="#">Фейсбук</a></li>
-        <li class="social-item"><a class="social-icon" href="#">Инстаграм</a></li>
+        <li class="social-item vk"><a title="Страница студии вконтакте" href="#"></a></li>
+        <li class="social-item fb"><a title="Страница студии на фейсбуке" href="#"></a></li>
+        <li class="social-item insta"><a title="Страница студии в инстаграме" href="#"></a></li>
       </ul>
 
       <div class="footer-slogan">
@@ -208,7 +177,27 @@
         <p>Скидка 10% для друзей из социальных сетей.</p>
       </div>
     </footer>
-    </div>
+  </div>
 
+  <!--Feedback form-->
+    <section class="connection">
+      <h2>Напишите нам</h2>
+        <form action="https://echo.htmlacademy.ru" method="post" class="connection-form" id="feedback">
+          <p class="connection-item name">
+            <label for="connection-name">Ваше имя:</label>
+            <input type="text" id="connection-name" name="name" placeholder="Имя Фамилия" required>
+          </p>
+          <p class="connection-item email">
+            <label for="connection-email">Ваш e-mail:</label>
+            <input type="email" id="connection-email" name="email" placeholder="email@example.com" required>
+          </p>
+          <p class="connection-item text">
+            <label for="connection-text">Текст письма:</label>
+            <textarea id="connection-text" name="text" placeholder="В свободной форме" rows="6" required></textarea>
+          </p>
+          <button type="submit" class="button button-connection">Отправить</button>
+          <button type="button" class="button-close" aria-label="Закрыть форму">Закрыть форму</button>
+        </form>
+    </section>
   </body>
 </html>
