@@ -18,10 +18,10 @@
             <img src="img/nerds-logo.svg" width="160" height="65" alt="Логотип дизайн-студии «Нёрдс»">
           </a>
           <ul class="site-navigation reset-list">
-            <li><a class="current-page" href="studio.html"> Студия</a></li>
-            <li><a href="clients.html"> Клиенты</a></li>
-            <li><a href="catalog.html"> Магазин</a></li>
-            <li><a href="contacts.html"> Контакты</a></li>
+            <li><a class="current-page">Студия</a></li>
+            <li><a href="clients.html">Клиенты</a></li>
+            <li><a href="catalog.html">Магазин</a></li>
+            <li><a href="contacts.html">Контакты</a></li>
           </ul>
           <div class="user-navigation">
             <a class="login-link" href="#">Корзина</a>
@@ -39,6 +39,7 @@
         <section class="slider container-center">
 
             <h2 class="visually-hidden">Преимущества</h2>
+
             <input class="visually-hidden" type="radio" id="product-1" name="toggle" checked>
             <input class="visually-hidden" type="radio" id="product-2" name="toggle">
             <input class="visually-hidden" type="radio" id="product-3" name="toggle">
@@ -157,7 +158,7 @@
         <p> 191186, Санкт-Петербург,
             ул. Б. Конюшенная, д. 19/8</p>
         <p class="contacts-tel">тел. <a href="tel:+78122757575"> +7 (812) 275-75-75</a></p>
-        <a class="button button-contact" href="#feedback"> Напишите нам</a>
+        <a class="button button-contact js-form-trigger" href="#feedback"> Напишите нам</a>
       </div>
     </section>
   </main>
@@ -180,24 +181,26 @@
   </div>
 
   <!--Feedback form-->
-    <section class="connection">
+    <section class="popup-connection js-form" hidden>
       <h2>Напишите нам</h2>
-        <form action="https://echo.htmlacademy.ru" method="post" class="connection-form" id="feedback">
-          <p class="connection-item name">
+        <form action="https://echo.htmlacademy.ru" method="post" class="popup-connection-form" id="feedback">
+          <p class="popup-connection-item name">
             <label for="connection-name">Ваше имя:</label>
             <input type="text" id="connection-name" name="name" placeholder="Имя Фамилия" required>
           </p>
-          <p class="connection-item email">
+          <p class="popup-connection-item email">
             <label for="connection-email">Ваш e-mail:</label>
             <input type="email" id="connection-email" name="email" placeholder="email@example.com" required>
           </p>
-          <p class="connection-item text">
+          <p class="popup-connection-item text">
             <label for="connection-text">Текст письма:</label>
             <textarea id="connection-text" name="text" placeholder="В свободной форме" rows="6" required></textarea>
           </p>
           <button type="submit" class="button button-connection">Отправить</button>
-          <button type="button" class="button-close" aria-label="Закрыть форму">Закрыть форму</button>
+          <button type="button" class="button-close js-form-close" aria-label="Закрыть форму">Закрыть форму</button>
         </form>
     </section>
+
+    <script src="js/script.js"></script>
   </body>
 </html>
