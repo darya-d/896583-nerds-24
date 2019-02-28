@@ -777,25 +777,27 @@ a {
 
 .popup-connection-item input,
 .popup-connection-item textarea {
+  padding: 13px;
+
   width: 100%;
-	padding: 13px;
+
   border: 2px solid #d7dcde;
-	border-radius: 6px;
+  border-radius: 6px;
+  outline: none;
 }
 
-.popup-connection-item input:hover,
-.popup-connection-item textarea:hover {
+.popup-connection-item input.is-invalid {
+  border-color: #e74246;
+  color: #e74246;
+}
+
+.popup-connection-item input:not(.is-invalid):not(.is-valid):hover,
+.popup-connection-item textarea:not(.is-invalid):not(.is-valid):hover {
   border-color: #b4b9bb;
 }
 
-.popup-connection-item input:focus,
-.popup-connection-item textarea:focus {
-  border-color: #000;
-  color: #444;
-}
-
-.popup-connection-item input:focus,
-.popup-connection-item textarea:focus {
+.popup-connection-item input:not(.is-invalid):not(.is-valid):focus,
+.popup-connection-item textarea:not(.is-invalid):not(.is-valid):focus {
   border-color: #000;
   color: #444;
 }

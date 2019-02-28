@@ -254,7 +254,7 @@
     <!--Feedback form-->
     <section class="popup-connection js-form" hidden>
       <h2>Напишите нам</h2>
-        <form action="https://echo.htmlacademy.ru" method="post" class="popup-connection-form" id="feedback">
+        <form action="https://echo.htmlacademy.ru" method="post" class="popup-connection-form" id="feedback" novalidate>
           <p class="popup-connection-item name">
             <label for="connection-name">Ваше имя:</label>
             <input type="text" id="connection-name" name="name" placeholder="Имя Фамилия" required>
@@ -265,7 +265,7 @@
           </p>
           <p class="popup-connection-item text">
             <label for="connection-text">Текст письма:</label>
-            <textarea id="connection-text" name="text" placeholder="В свободной форме" rows="6" required></textarea>
+            <textarea id="connection-text" name="text" placeholder="В свободной форме" rows="6"></textarea>
           </p>
           <button type="submit" class="button button-connection">Отправить</button>
           <button type="button" class="button-close js-form-close" aria-label="Закрыть форму">Закрыть форму</button>
