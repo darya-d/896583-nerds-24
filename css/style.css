@@ -131,8 +131,9 @@ a {
 .main-navigation {
   display: flex;
   flex-wrap: wrap;
+
   justify-content: space-between;
-  align-items: center; /* нужно ли? */
+  align-items: center;
 
   padding-top: 49px;
 }
@@ -153,11 +154,11 @@ a {
 .site-navigation,
 .user-navigation {
   list-style: none;
-  padding-top: 26px;
 }
 
 .site-navigation {
   display: flex;
+  flex-wrap: wrap;
   justify-content: space-between;
 
   width: 440px;
@@ -173,7 +174,7 @@ a {
   flex-wrap: wrap;
   justify-content: flex-end;
 
-  width: 160px;
+  max-width: 140px;
 }
 
 .user-navigation .login-link {
@@ -759,8 +760,8 @@ a {
 /* Форма для связи */
 .popup-connection {
   position: fixed;
-  margin: 20px;
   padding: 70px 100px 85px 100px;
+  top: 20px;
   bottom: 170px;
   left: 50%;
 
@@ -768,7 +769,7 @@ a {
   transform: translateX(-50%);
 
   background-color: #fff;
-  box-shadow: 0px 0 25px 0 rgba(0,0,0,0.25);
+  box-shadow: 0px 20px 40px 0 rgba(0, 1, 1, 0.75);
 }
 
 .popup-connection  h2 {
