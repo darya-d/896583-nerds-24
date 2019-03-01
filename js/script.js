@@ -98,5 +98,5 @@
 
       wasSubmitted = true;
     });
-  })(form);
+  })(document.getElementById('feedback'));
 })();

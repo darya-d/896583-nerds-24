@@ -70,7 +70,7 @@
               <legend>Сетка:</legend>
               <ul class="grid-list reset-list">
                 <li class="grid-item">
-                  <input class="visually-hidden grid-item-radio" type="radio" name="grid" id="adaptive" value="adaptive">
+                  <input class="visually-hidden grid-item-radio" type="radio" name="grid" id="adaptive" value="adaptive" checked>
                   <label for="adaptive">Адаптивная</label>
                 </li>
                 <li class="grid-item">
@@ -89,23 +89,23 @@
               <legend>Особенности:</legend>
               <ul class="features-list reset-list">
                 <li class="features-item">
-                  <input class="visually-hidden features-item-checkbox" type="checkbox" name="slider" id="slider">
+                  <input class="visually-hidden features-item-checkbox" type="checkbox" name="slider" id="slider" checked>
                   <label for="slider">Слайдер</label>
                 </li>
                 <li class="features-item">
-                  <input class="visually-hidden  features-item-checkbox" type="checkbox" name="advantages" id="advantages">
+                  <input class="visually-hidden features-item-checkbox" type="checkbox" name="advantages" id="advantages">
                   <label for="advantages">Блок преимуществ</label>
                 </li>
                   <li class="features-item">
-                    <input class="visually-hidden  features-item-checkbox" type="checkbox" name="news" id="news">
+                    <input class="visually-hidden features-item-checkbox" type="checkbox" name="news" id="news" checked>
                     <label for="news">Новости</label>
                 </li>
                 <li class="features-item">
-                    <input class="visually-hidden  features-item-checkbox" type="checkbox" name="gallery" id="gallery">
+                    <input class="visually-hidden features-item-checkbox" type="checkbox" name="gallery" id="gallery">
                     <label for="gallery">Галерея</label>
                 </li>
                 <li class="features-item">
-                    <input class="visually-hidden  features-item-checkbox" type="checkbox" name="basket" id="basket" class="features-item">
+                    <input class="visually-hidden features-item-checkbox" type="checkbox" name="basket" id="basket" class="features-item">
                     <label for="basket">Корзина</label>
                 </li>
               </ul>
@@ -257,15 +257,15 @@
         <form action="https://echo.htmlacademy.ru" method="post" class="popup-connection-form" id="feedback" novalidate>
           <p class="popup-connection-item name">
             <label for="connection-name">Ваше имя:</label>
-            <input type="text" id="connection-name" name="name" placeholder="Имя Фамилия" required>
+            <input class="popup-connection-input" type="text" id="connection-name" name="name" placeholder="Имя Фамилия" required>
           </p>
           <p class="popup-connection-item email">
             <label for="connection-email">Ваш e-mail:</label>
-            <input type="email" id="connection-email" name="email" placeholder="email@example.com" required>
+            <input class="popup-connection-input" type="email" id="connection-email" name="email" placeholder="email@example.com" required>
           </p>
           <p class="popup-connection-item text">
             <label for="connection-text">Текст письма:</label>
-            <textarea id="connection-text" name="text" placeholder="В свободной форме" rows="6"></textarea>
+            <textarea class="popup-connection-textarea" id="connection-text" name="text" placeholder="В свободной форме" rows="6"></textarea>
           </p>
           <button type="submit" class="button button-connection">Отправить</button>
           <button type="button" class="button-close js-form-close" aria-label="Закрыть форму">Закрыть форму</button>
