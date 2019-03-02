@@ -5,6 +5,7 @@
   var formTrigger = document.querySelector('.js-form-trigger');
   var formClose = form.querySelector('.js-form-close');
 
+
   // Form interactivity
 
   if (formTrigger) {
@@ -20,6 +21,7 @@
       form.hidden = true;
     });
   }
+
 
   // Form validation
 
@@ -70,8 +72,8 @@
       }
     }
 
-    formElem.addEventListener('submit', function (e) {
-      e.preventDefault();
+    formElem.addEventListener('submit', function (event) {
+      event.preventDefault();
       var _iteratorNormalCompletion2 = true;
       var _didIteratorError2 = false;
       var _iteratorError2 = undefined;
