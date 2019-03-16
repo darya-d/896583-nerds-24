@@ -10,7 +10,6 @@
   <body>
 
     <!--HEADER-->
-
     <div class="background">
       <header class="main-header container-center">
         <nav class="main-navigation">
@@ -18,18 +17,23 @@
             <img src="img/nerds-logo.svg" width="160" height="65" alt="Логотип дизайн-студии «Нёрдс»">
           </a>
           <ul class="site-navigation reset-list">
-            <li><a class="current-page">Студия</a></li>
-            <li><a href="clients.html">Клиенты</a></li>
-            <li><a href="catalog.html">Магазин</a></li>
-            <li><a href="contacts.html">Контакты</a></li>
+            <li>
+              <a href="studio.html">Студия</a>
+            </li>
+            <li>
+              <a href="clients.html">Клиенты</a>
+            </li>
+            <li>
+              <a href="catalog.html">Магазин</a>
+            </li>
+            <li>
+              <a href="contacts.html">Контакты</a>
+            </li>
           </ul>
-          <div class="user-navigation">
-            <a class="login-link" href="#">Корзина</a>
-          </div>
+          <a class="user-navigation" href="#">Корзина</a>
         </nav>
       </header>
     </div>
-
 
     <!--MAIN-->
       <main class="container">
@@ -41,9 +45,9 @@
 
             <h2 class="visually-hidden">Преимущества</h2>
 
-            <input class="visually-hidden" type="radio" id="product-1" name="toggle" checked>
-            <input class="visually-hidden" type="radio" id="product-2" name="toggle">
-            <input class="visually-hidden" type="radio" id="product-3" name="toggle">
+            <input class="visually-hidden slider-1" type="radio" id="product-1" name="toggle" checked>
+            <input class="visually-hidden slider-2" type="radio" id="product-2" name="toggle">
+            <input class="visually-hidden slider-3" type="radio" id="product-3" name="toggle">
 
             <div class="slider-controls">
               <label class="slider-controls-item slider-controls-item-1" for="product-1">Слайд 1</label>
@@ -54,7 +58,7 @@
             <ul class="slider-list reset-list ">
               <li class="slider-item">
                 <h3>Долго, дорого, скрупулезно.</h3>
-                <p>Математически выверенный дизайн для вашего сайта или мобильного приложения.</p>
+                <p>Математически выверенный дизайн <br> для вашего сайта или мобильного приложения.</p>
                 <a class="button button-slider" href="#">Узнать больше</a>
               </li>
               <li class="slider-item">
@@ -75,7 +79,6 @@
     <div class="container-center">
 
     <!-- Услуги -->
-
     <section class="services">
       <h2 class="visually-hidden">Услуги</h2>
       <ul class="services-list reset-list">
@@ -100,64 +103,83 @@
     <section class="info">
       <h2 class="visually-hidden">О нас</h2>
 
-      <div class="info-column-left">
-        <b class="info-title"> Мы — маленькая, но гордая дизайн-студия из Краснодара.</b>
-        <p class="info-text"> Исповедуем принципы минимализма и чистоты. Ставим математический расчет выше креатива.
+      <div class="info-description">
+        <b class="info-description-title">Мы — маленькая, но гордая дизайн-студия из Краснодара.</b>
+        <p class="info-description-text">Исповедуем принципы минимализма и чистоты. Ставим математический расчет превыше креатива.
                               Работаем не покладая рук, как роботы.</p>
-        <h3> Выполняем заказы на разработку:</h3>
+        <h3>Выполняем заказы на разработку:</h3>
           <ul class="orders-list reset-list">
-            <li class="orders-item"> Веб-сайтов любой сложности</li>
-            <li class="orders-item"> Мобильных приложений для iOS и Android</li>
-            <li class="orders-item"> Слайдшоу и видео для корпоративных презентаций</li>
+            <li class="orders-item">Веб-сайтов любой сложности</li>
+            <li class="orders-item">Мобильных приложений для iOS и Android</li>
+            <li class="orders-item">Слайдшоу и видео для корпоративных презентаций</li>
           </ul>
       </div>
 
-        <div class="info-column-right">
+        <div class="info-numbers">
           <img class="main-logo" src="img/illustration-nerds.jpg" width="360" height="208" alt="Логотип дизайн-студии «Нёрдс»">
-          <h3 class="work"> С 2004 года любим точность во всем:</h3>
-            <ul class="work-list reset-list">
-              <li class="work-item">
-                <span class="work-percent">146 <sup>%</sup></span>
-                <span class="work-description">Уровень самоотдачи</span>
-              </li>
-              <li class="work-item">
-                <span class="work-percent">100 <sup>%</sup></span>
-                <span class="work-description">Соблюдение сроков</span>
-              </li>
-              <li class="work-item">
-                <span class="work-percent">50 <sup>%</sup></span>
-                <span class="work-description">Минимальная предоплата</span>
-              </li>
-            </ul>
+          <table class="info-numbers-table">
+						<caption>С 2004 года любим точность во всём:</caption>
+						<thead>
+							<tr>
+								<th>146<sup>%</sup></th>
+								<th>100<sup>%</sup></th>
+								<th>50<sup>%</sup></th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr>
+								<td>Уровень самоотдачи</td>
+								<td>Соблюдение сроков</td>
+								<td>Минимальная предоплата</td>
+							</tr>
+						</tbody>
+					</table>
         </div>
     </section>
 
     <!--Our partners-->
     <section class="partners">
-      <h2 class="visually-hidden"> Наши партнеры</h2>
-        <ul class="partners-logo reset-list">
-          <li><a href="https://htmlacademy.ru/intensive/htmlcss"><img src="img/logo-1.png" width="199" height="68" alt="HTML Academy"></a></li>
-          <li><a href="#"><img src="img/logo-2.png" width="209" height="90" alt="Barbershop Borodinski"></a></li>
-          <li><a href="#"><img src="img/logo-3.png" width="185" height="52" alt="Pink"></a></li>
-          <li><a href="#"><img src="img/logo-4.png" width="173" height="84" alt="Mishka"></a></li>
+      <h2 class="visually-hidden">Наши партнеры</h2>
+        <ul class="partners-list reset-list">
+          <li>
+            <a href="https://htmlacademy.ru/intensive/htmlcss">
+              <span class="visually-hidden">HTML Academy</span>
+              <img src="img/logo-1.png" width="199" height="68" alt="HTML Academy">
+            </a>
+          </li>
+          <li>
+            <a href="#">
+              <span class="visually-hidden">Borodinski</span>
+              <img src="img/logo-2.png" width="209" height="90" alt="Barbershop Borodinski">
+            </a>
+          </li>
+          <li>
+            <a href="#">
+              <span class="visually-hidden">Pink</span>
+              <img src="img/logo-3.png" width="185" height="52" alt="Pink">
+            </a>
+          </li>
+          <li>
+            <a href="#">
+              <span class="visually-hidden">Mishka</span>
+              <img src="img/logo-4.png" width="173" height="84" alt="Mishka">
+            </a>
+          </li>
         </ul>
     </section>
     </div>
 
-    <!--Google map-->
-    <section class="contacts">
-      <h2 class="visually-hidden"> Как до нас добраться</h2>
-      <div class="contacts-map">
-        <img class="map-img" src="img/map-google.jpg" width="1440" height="416"
-              alt="Офис компании по адресу ул. Б. Конюшенная 19/8, Санкт-Петербург">
-      </div>
-
     <!--Address-->
+    <section class="contacts">
+      <h2 class="visually-hidden">Как до нас добраться</h2>
+
+      <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1998.6037872533277!2d30.320858716096975!3d59.93871648187614!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca145cc1%3A0x42b32648d8238007!2z0JHQvtC70YzRiNCw0Y8g0JrQvtC90Y7RiNC10L3QvdCw0Y8g0YPQuy4sIDE5LzgsINCh0LDQvdC60YIt0J_QtdGC0LXRgNCx0YPRgNCzLCDQoNC-0YHRgdC40Y8sIDE5MTE4Ng!5e0!3m2!1sru!2sby!4v1552167273582" width="1440" height="416" frameborder="0" style="border:0" allowfullscreen></iframe>
       <div class="contacts-info">
-        <b> NЁRDS DESIGN STUDIO</b>
-        <p> 191186, Санкт-Петербург,
-            ул. Б. Конюшенная, д. 19/8</p>
-        <p class="contacts-tel">тел. <a href="tel:+78122757575"> +7 (812) 275-75-75</a></p>
+        <p class="contacts-name">NЁRDS DESIGN STUDIO</p>
+        <p class="contacts-address">191186, Санкт-Петербург, ул. Б. Конюшенная, д. 19/8</p>
+        <p class="contacts-tel">тел.
+          <a href="tel:+78122757575"> +7 (812) 275-75-75</a>
+        </p>
         <a class="button button-contact js-form-trigger" href="#feedback"> Напишите нам</a>
       </div>
     </section>
@@ -167,11 +189,23 @@
   <!--FOOTER-->
   <div class="container-center">
     <footer class="main-footer">
-      <h2 class="visually-hidden"> Мы в социальных сетях</h2>
+      <h2 class="visually-hidden">Мы в социальных сетях</h2>
       <ul class="social-list reset-list">
-        <li class="social-item vk"><a title="Страница студии вконтакте" href="#"></a></li>
-        <li class="social-item fb"><a title="Страница студии на фейсбуке" href="#"></a></li>
-        <li class="social-item insta"><a title="Страница студии в инстаграме" href="#"></a></li>
+        <li class="social-item vk">
+          <a href="#">
+            <span class="visually-hidden">Вконтакте</span>
+          </a>
+        </li>
+        <li class="social-item fb">
+          <a href="#">
+            <span class="visually-hidden">Фейсбук</span>
+          </a>
+        </li>
+        <li class="social-item insta">
+          <a href="#">
+            <span class="visually-hidden">Инстаграм</span>
+          </a>
+        </li>
       </ul>
 
       <div class="footer-slogan">
