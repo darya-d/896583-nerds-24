@@ -1,104 +1,73 @@
-'use strict';
+var popup = document.querySelector(".js-form");
+var formTrigger = document.querySelector(".js-form-trigger");
+var formClose = popup.querySelector('.js-form-close');
 
-(function () {
-  var form = document.querySelector('.js-form');
-  var formTrigger = document.querySelector('.js-form-trigger');
-  var formClose = form.querySelector('.js-form-close');
+var form = popup.querySelector("form");
+var userName = popup.querySelector("[name=name]");
+var userEmail = popup.querySelector("[name=email]");
+var userText = popup.querySelector("[name=text]");
 
-
-  // Form interactivity
-
-  if (formTrigger) {
-    formTrigger.addEventListener('click', function (event) {
-      event.preventDefault();
-      form.hidden = false;
-    });
+// Событие клика по кнопке
+formTrigger.addEventListener('click', function (evt) {
+  evt.preventDefault();
+  popup.classList.add("popup-show");
+  if (storageName || storageEmail) {
+    userName.value = storageName;
+    userEmail.value = storageEmail;
+    userText.focus();
+  } else {
+    userName.focus();
   }
+});
 
-  if (formClose) {
-    formClose.addEventListener('click', function (event) {
-      event.preventDefault();
-      form.hidden = true;
-    });
-  }
+// Событие закрытия формы
+formClose.addEventListener("click", function (evt) {
+  evt.preventDefault();
+  popup.classList.remove("popup-show");
+  });
 
-
-  // Form validation
-
-  var INVALID_CLASS = 'is-invalid';
-  var VALID_CLASS = 'is-valid';
-  var wasSubmitted = false;
-
-  (function validateForm(formElem) {
-    var requiredFields = formElem.querySelectorAll('[required]');
-
-    var validate = function validate(elem) {
-      if (!elem.value || !elem.checkValidity()) {
-        elem.classList.add(INVALID_CLASS);
-        elem.classList.remove(VALID_CLASS);
-        return;
-      }
-
-      elem.classList.remove(INVALID_CLASS);
-      elem.classList.add(VALID_CLASS);
-    };
-
-    var _iteratorNormalCompletion = true;
-    var _didIteratorError = false;
-    var _iteratorError = undefined;
-
-    try {
-      for (var _iterator = requiredFields[Symbol.iterator](), _step; !(_iteratorNormalCompletion = (_step = _iterator.next()).done); _iteratorNormalCompletion = true) {
-        var field = _step.value;
-
-        field.onkeyup = function (e) {
-          if (wasSubmitted) {
-            validate(e.target);
-          }
-        };
-      }
-    } catch (err) {
-      _didIteratorError = true;
-      _iteratorError = err;
-    } finally {
-      try {
-        if (!_iteratorNormalCompletion && _iterator.return != null) {
-          _iterator.return();
-        }
-      } finally {
-        if (_didIteratorError) {
-          throw _iteratorError;
-        }
-      }
+// Валидация формы
+form.addEventListener("submit", function (evt) {
+  userName.classList.remove("input-error");
+  userEmail.classList.remove("input-error");
+    if (!userName.value || !userEmail.value) {
+      evt.preventDefault();
+      popup.classList.remove("popup-error");
+      popup.offsetWidth = popup.offsetWidth;
+      popup.classList.add("popup-error");
+    } else {
+      if (isStorageSupport)
+        localStorage.setItem("name", userName.value);
+        localStorage.setItem("email", userEmail.value);
     }
+    if (!userName.value) {
+      userName.classList.add("input-error");
+    }
+    if (!userEmail.value) {
+      userEmail.classList.add("input-error");
+    }
+  }
+);
 
-    formElem.addEventListener('submit', function (event) {
-      event.preventDefault();
-      var _iteratorNormalCompletion2 = true;
-      var _didIteratorError2 = false;
-      var _iteratorError2 = undefined;
+// Обработчик события нажатия кнопки ESC и закрытия модального окна
+window.addEventListener("keydown", function (evt) {
+if (evt.keyCode === 27) {
+  evt.preventDefault();
+  if (popup.classList.contains("popup-show")) {
+    popup.classList.remove("popup-show");
+    popup.classList.remove("popup-error");
+  }
+}
+});
 
-      try {
-        for (var _iterator2 = requiredFields[Symbol.iterator](), _step2; !(_iteratorNormalCompletion2 = (_step2 = _iterator2.next()).done); _iteratorNormalCompletion2 = true) {
-          var field = _step2.value;
-          validate(field);
-        }
-      } catch (err) {
-        _didIteratorError2 = true;
-        _iteratorError2 = err;
-      } finally {
-        try {
-          if (!_iteratorNormalCompletion2 && _iterator2.return != null) {
-            _iterator2.return();
-          }
-        } finally {
-          if (_didIteratorError2) {
-            throw _iteratorError2;
-          }
-        }
-      }
+// // Поддержка LocalStorage (опционально)
+// var isStorageSupport = true;
+// var storageName = "";
+// var storageEmail = "";
 
-      wasSubmitted = true;
-    });
-  })(document.getElementById('feedback'));
-})();
+// try {
+//   storageName = localStorage.getItem("name");
+//   storageEmail = localStorage.getItem("email");
+// } catch (err) {
+//   isStorageSupport = false;
+// }
